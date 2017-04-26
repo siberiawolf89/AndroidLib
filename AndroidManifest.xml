@@ -1,0 +1,44 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.jiuli.library"
+    android:versionCode="1"
+    android:versionName="1.0" >
+    
+    <!-- 网络访问权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />  
+    <!-- 向SD卡 写入文件的权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="21"
+        tools:overrideLibrary="jp.wasabeef.glide.transformations"/>
+    <application>
+    <!--图片预览界面-->
+    <activity
+        android:name="com.jiuli.library.activity.BGAPhotoPreviewActivity"
+        android:configChanges="keyboardHidden|orientation"
+        android:screenOrientation="portrait"
+        android:windowSoftInputMode="stateAlwaysHidden" />
+
+    <!--图片选择界面-->
+    <activity
+        android:name="com.jiuli.library.activity.BGAPhotoPickerActivity"
+        android:configChanges="keyboardHidden|orientation"
+        android:screenOrientation="portrait"
+        android:windowSoftInputMode="stateAlwaysHidden" />
+
+    <!--图片选择预览界面-->
+    <activity
+        android:name="com.jiuli.library.activity.BGAPhotoPickerPreviewActivity"
+        android:configChanges="keyboardHidden|orientation"
+        android:screenOrientation="portrait"
+        android:windowSoftInputMode="stateAlwaysHidden" />
+
+    </application>
+
+</manifest>

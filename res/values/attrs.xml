@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 下拉刷新 -->
+    <declare-styleable name="PullToRefresh">
+        <!-- A drawable to use as the background of the Refreshable View -->
+        <attr name="ptrRefreshableViewBackground" format="reference|color" />
+
+        <!-- A drawable to use as the background of the Header and Footer Loading Views -->
+        <attr name="ptrHeaderBackground" format="reference|color" />
+        <attr name="ptrFooterBackground" format="reference|color" />
+
+
+        <!-- Text Color of the Header and Footer Loading Views -->
+        <attr name="ptrHeaderTextColor" format="reference|color" />
+
+        <!-- Text Color of the Header and Footer Loading Views -->
+        <attr name="ptrFootTextColor" format="reference|color" />
+
+        <!-- Text Color of the Header and Footer Loading Views Sub Header -->
+        <attr name="ptrHeaderSubTextColor" format="reference|color" />
+
+        <!-- Mode of Pull-to-Refresh that should be used -->
+        <attr name="ptrMode">
+            <flag name="disabled" value="0x0" />
+            <flag name="pullFromStart" value="0x1" />
+            <flag name="pullFromEnd" value="0x2" />
+            <flag name="both" value="0x3" />
+            <flag name="manualOnly" value="0x4" />
+
+            <!-- These last two are depreacted -->
+            <flag name="pullDownFromTop" value="0x1" />
+            <flag name="pullUpFromBottom" value="0x2" />
+        </attr>
+
+        <!-- Whether the Indicator overlay(s) should be used -->
+        <attr name="ptrShowIndicator" format="reference|boolean" />
+
+        <!-- Drawable to use as Loading Indicator. Changes both Header and Footer. -->
+        <attr name="ptrDrawable" format="reference" />
+
+        <!-- Drawable to use as Loading Indicator in the Header View. Overrides value set in ptrDrawable. -->
+        <attr name="ptrDrawableStart" format="reference" />
+
+        <!-- Drawable to use as Loading Indicator in the Footer View. Overrides value set in ptrDrawable. -->
+        <attr name="ptrDrawableEnd" format="reference" />
+
+        <!-- Whether Android's built-in Over Scroll should be utilised for Pull-to-Refresh. -->
+        <attr name="ptrOverScroll" format="reference|boolean" />
+
+        <!-- Base text color, typeface, size, and style for Header and Footer Loading Views -->
+        <attr name="ptrHeaderTextAppearance" format="reference" />
+
+        <!-- Base text color, typeface, size, and style for Header and Footer Loading Views Sub Header -->
+        <attr name="ptrSubHeaderTextAppearance" format="reference" />
+
+        <!-- Style of Animation should be used displayed when pulling. -->
+        <attr name="ptrAnimationStyle">
+            <flag name="rotate" value="0x0" />
+            <flag name="flip" value="0x1" />
+        </attr>
+
+        <!-- Whether the user can scroll while the View is Refreshing -->
+        <attr name="ptrScrollingWhileRefreshingEnabled" format="reference|boolean" />
+
+        <!--
+        	Whether PullToRefreshListView has it's extras enabled. This allows the user to be
+        	able to scroll while refreshing, and behaves better. It acheives this by adding
+        	Header and/or Footer Views to the ListView.
+        -->
+        <attr name="ptrListViewExtrasEnabled" format="reference|boolean" />
+
+        <!--
+        	Whether the Drawable should be continually rotated as you pull. This only
+        	takes effect when using the 'Rotate' Animation Style.
+        -->
+        <attr name="ptrRotateDrawableWhilePulling" format="reference|boolean" />
+
+        <!-- BELOW HERE ARE DEPRECEATED. DO NOT USE. -->
+        <attr name="ptrAdapterViewBackground" format="reference|color" />
+        <attr name="ptrDrawableTop" format="reference" />
+        <attr name="ptrDrawableBottom" format="reference" />
+
+        <attr name="ptrHeaderLayout" format="reference" />
+        <attr name="ptrFooterLayout" format="reference" />
+    </declare-styleable>
+    
+    <attr name="fontPath" format="string"/>
+
+
+    <declare-styleable name="RippleLayout">
+        <attr name="ripplealpha" format="integer" />
+        <attr name="rippleframerate" format="integer"/>
+        <attr name="rippleDuration" format="integer"/>
+        <attr name="ripplezoomDuration" format="integer" />
+        <attr name="ripplecolor" format="color" />
+        <attr name="ripplecentered" format="boolean" />
+        <attr name="rippletype" format="enum">
+            <enum name="simpleRipple" value="0"/>
+            <enum name="doubleRipple" value="1"/>
+            <enum name="rectangle" value="2" />
+        </attr>
+        <attr name="ripplePadding" format="dimension" />
+        <attr name="ripplezoom" format="boolean" />
+        <attr name="ripplezoomScale" format="float" />
+
+    </declare-styleable>
+
+    <!-- SynImageView  -->
+    <declare-styleable name="WebImageView">
+        <attr name="defaultSrc" format="reference" />
+        <attr name="url" format="string" />
+        <attr name="rounded" format="integer" />
+        <attr name="inDensity">
+            <enum name="ldpi" value="120" />
+            <enum name="mdpi" value="160" />
+            <enum name="hdpi" value="240" />
+            <enum name="xhdpi" value="320" />
+        </attr>
+    </declare-styleable>
+
+
+    <!-- GlideImageView -->
+    <declare-styleable name="GlideImageView">
+        <attr name="placeholder" format="reference" />
+        <attr name="error" format="reference" />
+        <attr name="loadurl" format="string" />
+        <attr name="loadres" format="reference" />
+    </declare-styleable>
+
+    <!-- SwipeToLoadLayout 刷新控件 -->
+    <declare-styleable name="SwipeToLoadLayout">
+        <attr name="refresh_enabled" format="boolean" />
+        <attr name="load_more_enabled" format="boolean" />
+
+        <attr name="swipe_style" format="enum">
+            <enum name="classic" value="0" />
+            <enum name="above" value="1" />
+            <enum name="blew" value="2" />
+            <enum name="scale" value="3" />
+        </attr>
+        <attr name="refresh_trigger_offset" format="dimension" />
+        <attr name="load_more_trigger_offset" format="dimension" />
+        <attr name="refresh_final_drag_offset" format="dimension" />
+        <attr name="load_more_final_drag_offset" format="dimension" />
+
+
+        <attr name="release_to_refreshing_scrolling_duration" format="integer" />
+        <attr name="refresh_complete_delay_duration" format="integer" />
+        <attr name="refresh_complete_to_default_scrolling_duration" format="integer" />
+        <attr name="default_to_refreshing_scrolling_duration" format="integer" />
+        <attr name="release_to_loading_more_scrolling_duration" format="integer" />
+        <attr name="load_more_complete_delay_duration" format="integer" />
+        <attr name="load_more_complete_to_default_scrolling_duration" format="integer" />
+        <attr name="default_to_loading_more_scrolling_duration" format="integer" />
+    </declare-styleable>
+
+
+    <declare-styleable name="BGAImageView">
+        <!-- 默认图片资源，默认为null -->
+        <attr name="android:src" />
+        <!-- 是否是圆形，默认值为false -->
+        <attr name="bga_iv_isCircle" format="boolean" />
+        <!-- 圆角矩形的半径，默认值为0dp -->
+        <attr name="bga_iv_cornerRadius" format="reference|dimension" />
+        <!-- 是否是矩形，默认值为false -->
+        <attr name="bga_iv_isSquare" format="boolean" />
+        <!-- 描边的宽度，默认值为0dp -->
+        <attr name="bga_iv_borderWidth" format="reference|dimension" />
+        <!-- 描边的颜色，默认值为Color.WHITE -->
+        <attr name="bga_iv_borderColor" format="reference|color" />
+    </declare-styleable>
+
+    <declare-styleable name="BGASortableNinePhotoLayout">
+        <!-- 加号按钮开关是否打开，默认值为true -->
+        <attr name="bga_snpl_isPlusSwitchOpened" format="boolean" />
+        <!-- 是否可拖拽排序，默认值为true -->
+        <attr name="bga_snpl_isSortable" format="boolean" />
+
+        <attr name="bga_snpl_def_add_img" format="reference"/>
+    </declare-styleable>
+
+
+
+
+    <!-- Common attributes -->
+
+    <attr name="bootstrapBrand" format="enum">
+        <enum name="primary" value="0"/>
+        <enum name="success" value="1"/>
+        <enum name="info" value="2"/>
+        <enum name="warning" value="3"/>
+        <enum name="danger" value="4"/>
+        <enum name="regular" value="5"/>
+        <enum name="secondary" value="6"/>
+    </attr>
+
+    <attr name="buttonMode" format="enum">
+        <enum name="regular" value="0"/>
+        <enum name="toggle" value="1"/>
+        <enum name="checkbox" value="2"/>
+        <enum name="radio" value="3"/>
+    </attr>
+
+    <attr name="bootstrapSize" format="enum">
+        <enum name="xs" value="0"/>
+        <enum name="sm" value="1"/>
+        <enum name="md" value="2"/>
+        <enum name="lg" value="3"/>
+        <enum name="xl" value="4"/>
+    </attr>
+
+    <attr name="bootstrapHeading" format="enum">
+        <enum name="h1" value="0"/>
+        <enum name="h2" value="1"/>
+        <enum name="h3" value="2"/>
+        <enum name="h4" value="3"/>
+        <enum name="h5" value="4"/>
+        <enum name="h6" value="5"/>
+    </attr>
+
+    <attr name="bootstrapExpandDirection" format="enum">
+        <enum name="up" value="0"/>
+        <enum name="down" value="1"/>
+    </attr>
+
+    <attr name="showOutline" format="boolean"/>
+    <attr name="roundedCorners" format="boolean"/>
+    <attr name="hasBorder" format="boolean"/>
+    <attr name="checkedButton" format="reference"/>
+    <attr name="checked" format="boolean"/>
+    <attr name="dropdownResource" format="reference"/>
+    <attr name="itemHeight" format="dimension"/>
+    <attr name="strongText" format="string"/>
+    <attr name="messageText" format="string"/>
+    <attr name="badgeText" format="string"/>
+    <attr name="dismissible" format="boolean"/>
+
+    <!-- View attributes -->
+
+    <declare-styleable name="AwesomeTextView">
+        <attr name="bootstrapText" format="string"/>
+        <attr name="bootstrapBrand"/>
+        <attr name="fontAwesomeIcon"/>
+        <attr name="typicon"/>
+        <attr name="materialIcon" />
+        <attr name="android:clickable" />
+    </declare-styleable>
+
+    <declare-styleable name="BootstrapLabel">
+        <attr name="bootstrapHeading"/>
+        <attr name="roundedCorners"/>
+    </declare-styleable>
+
+    <declare-styleable name="BootstrapButton">
+        <attr name="buttonMode"/>
+        <attr name="showOutline"/>
+        <attr name="roundedCorners"/>
+        <attr name="bootstrapBrand"/>
+        <attr name="bootstrapSize"/>
+        <attr name="checked"/>
+        <attr name="badgeText"/>
+    </declare-styleable>
+
+    <declare-styleable name="BootstrapButtonGroup">
+        <attr name="buttonMode"/>
+        <attr name="showOutline"/>
+        <attr name="roundedCorners"/>
+        <attr name="bootstrapBrand"/>
+        <attr name="bootstrapSize"/>
+        <attr name="checkedButton"/>
+    </declare-styleable>
+
+    <declare-styleable name="BootstrapProgressBar">
+        <attr name="striped" format="boolean"/>
+        <attr name="animated" format="boolean"/>
+        <attr name="bootstrapProgress" format="integer"/>
+        <attr name="bootstrapMaxProgress" format="integer"/>
+        <attr name="bootstrapshowPercentage" format="boolean"/>
+        <attr name="roundedCorners"/>
+        <attr name="bootstrapBrand"/>
+        <attr name="bootstrapSize"/>
+    </declare-styleable>
+
+    <declare-styleable name="BootstrapProgressBarGroup">
+        <attr name="bootstrapMaxProgress"/>
+        <attr name="bootstrapSize"/>
+        <attr name="roundedCorners"/>
+    </declare-styleable>
+
+    <declare-styleable name="BootstrapCircleThumbnail">
+        <attr name="bootstrapBrand"/>
+        <attr name="hasBorder"/>
+        <attr name="bootstrapSize"/>
+    </declare-styleable>
+
+    <declare-styleable name="BootstrapThumbnail">
+        <attr name="bootstrapBrand"/>
+        <attr name="roundedCorners"/>
+        <attr name="hasBorder"/>
+        <attr name="bootstrapSize"/>
+    </declare-styleable>
+
+    <declare-styleable name="BootstrapEditText">
+        <attr name="roundedCorners"/>
+        <attr name="bootstrapBrand"/>
+        <attr name="bootstrapSize"/>
+    </declare-styleable>
+
+    <declare-styleable name="BootstrapDropDown">
+        <attr name="bootstrapExpandDirection"/>
+        <attr name="dropdownResource"/>
+        <attr name="showOutline"/>
+        <attr name="roundedCorners"/>
+        <attr name="bootstrapBrand"/>
+        <attr name="bootstrapSize"/>
+        <attr name="itemHeight"/>
+    </declare-styleable>
+
+    <declare-styleable name="BootstrapWell">
+        <attr name="bootstrapSize"/>
+    </declare-styleable>
+
+    <declare-styleable name="BootstrapAlert">
+        <attr name="bootstrapBrand"/>
+        <attr name="strongText"/>
+        <attr name="messageText"/>
+        <attr name="dismissible"/>
+    </declare-styleable>
+
+    <declare-styleable name="BootstrapBadge">
+        <attr name="badgeText"/>
+        <attr name="bootstrapSize"/>
+    </declare-styleable>
+
+    <declare-styleable name="BGABanner">
+        <!-- 指示点容器背景 -->
+        <attr name="banner_pointContainerBackground" format="reference|color" />
+        <!-- 指示点背景 -->
+        <attr name="banner_pointDrawable" format="reference" />
+        <!-- 指示点容器左右内间距 -->
+        <attr name="banner_pointContainerLeftRightPadding" format="dimension" />
+        <!-- 指示点上下外间距 -->
+        <attr name="banner_pointTopBottomMargin" format="dimension" />
+        <!-- 指示点左右外间距 -->
+        <attr name="banner_pointLeftRightMargin" format="dimension" />
+        <!-- 指示器的位置 -->
+        <attr name="banner_indicatorGravity">
+            <flag name="top" value="0x30" />
+            <flag name="bottom" value="0x50" />
+            <flag name="left" value="0x03" />
+            <flag name="right" value="0x05" />
+            <flag name="center_horizontal" value="0x01" />
+        </attr>
+        <!-- 是否开启自动轮播 -->
+        <attr name="banner_pointAutoPlayAble" format="boolean" />
+        <!-- 自动轮播的时间间隔 -->
+        <attr name="banner_pointAutoPlayInterval" format="integer" />
+        <!-- 页码切换过程的时间长度 -->
+        <attr name="banner_pageChangeDuration" format="integer" />
+        <!-- 页面切换的动画效果 -->
+        <attr name="banner_transitionEffect" format="enum">
+            <enum name="defaultEffect" value="0" />
+            <enum name="alpha" value="1" />
+            <enum name="rotate" value="2" />
+            <enum name="cube" value="3" />
+            <enum name="flip" value="4" />
+            <enum name="accordion" value="5" />
+            <enum name="zoomFade" value="6" />
+            <enum name="fade" value="7" />
+            <enum name="zoomCenter" value="8" />
+            <enum name="zoomStack" value="9" />
+            <enum name="stack" value="10" />
+            <enum name="depth" value="11" />
+            <enum name="zoom" value="12" />
+        </attr>
+        <!-- 提示文案的文字颜色 -->
+        <attr name="banner_tipTextColor" format="reference|color" />
+        <!-- 提示文案的文字大小 -->
+        <attr name="banner_tipTextSize" format="dimension" />
+        <!-- 加载网络数据时覆盖在BGABanner最上层的占位图 -->
+        <attr name="banner_placeholderDrawable" format="reference" />
+        <!-- 是否是数字指示器 -->
+        <attr name="banner_isNumberIndicator" format="boolean" />
+        <!-- 数字指示器文字颜色 -->
+        <attr name="banner_numberIndicatorTextColor" format="reference|color" />
+        <!-- 数字指示器文字大小 -->
+        <attr name="banner_numberIndicatorTextSize" format="dimension" />
+        <!-- 数字指示器背景 -->
+        <attr name="banner_numberIndicatorBackground" format="reference" />
+        <!-- 当只有一页数据时是否显示指示器，默认值为false -->
+        <attr name="banner_isNeedShowIndicatorOnOnlyOnePage" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="pickerview">
+        <attr name="pickerview_gravity">
+            <enum name="center" value="17"/>
+            <enum name="left" value="3"/>
+            <enum name="right" value="5"/>
+        </attr>
+        <attr name="pickerview_textSize" format="dimension"/>
+        <attr name="pickerview_textColorOut" format="color"/>
+        <attr name="pickerview_textColorCenter" format="color"/>
+        <attr name="pickerview_dividerColor" format="color"/>
+        <attr name="pickerview_lineSpacingMultiplier" format="float"/>
+    </declare-styleable>
+
+</resources>
